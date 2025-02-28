@@ -516,7 +516,10 @@
     }
   
     .hero-image {
-      justify-content: center;
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      border-radius: 20px;
     }
   
     .section-title {
