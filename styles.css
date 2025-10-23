@@ -1,17 +1,20 @@
 /* Base Styles and Variables */
 :root {
-    --primary-color: #4a6cf7;
-    --secondary-color: #6c757d;
-    --dark-color: #212529;
-    --light-color: #f8f9fa;
-    --success-color: #28a745;
-    --danger-color: #dc3545;
-    --body-color: #f5f8ff;
-    --text-color: #333;
-    --border-color: #e9ecef;
-    --transition: all 0.3s ease;
-    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --primary-color: #2563eb;
+    --secondary-color: #64748b;
+    --dark-color: #0f172a;
+    --light-color: #f8fafc;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --body-color: #ffffff;
+    --text-color: #1e293b;
+    --text-light: #64748b;
+    --border-color: #e2e8f0;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --container-width: 1200px;
+    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
   
   * {
@@ -26,9 +29,12 @@
   
   body {
     font-family: "Poppins", sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--text-color);
     background-color: var(--body-color);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   a {
@@ -60,11 +66,12 @@
   
   .section-title {
     text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-size: 2.75rem;
     font-weight: 700;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
+    color: var(--dark-color);
   }
   
   .section-title::after {
@@ -73,9 +80,9 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 100px;
     height: 4px;
-    background-color: var(--primary-color);
+    background: var(--gradient);
     border-radius: 2px;
   }
   
@@ -90,23 +97,26 @@
   /* Button Styles */
   .btn {
     display: inline-block;
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-weight: 500;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
     text-align: center;
+    font-size: 16px;
+    border: none;
+    text-decoration: none;
   }
   
   .primary-btn {
-    background-color: var(--primary-color);
+    background: var(--gradient);
     color: white;
-    border: 2px solid var(--primary-color);
+    box-shadow: var(--shadow);
   }
   
   .primary-btn:hover {
-    background-color: transparent;
-    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
   }
   
   .secondary-btn {
@@ -118,6 +128,7 @@
   .secondary-btn:hover {
     background-color: var(--primary-color);
     color: white;
+    transform: translateY(-2px);
   }
   
   .small-btn {
@@ -131,10 +142,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
     z-index: 1000;
-    padding: 15px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
   }
   
   header .container {
@@ -227,8 +240,13 @@
   
   .hero-image img {
     max-width: 80%;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+  }
+  
+  .hero-image img:hover {
+    transform: scale(1.02);
   }
   
   /* About Section */
@@ -279,9 +297,16 @@
   
   .skill-card {
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 24px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
   }
   
   .skill-card h3 {
@@ -311,14 +336,16 @@
   
   .project-card {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
     transition: var(--transition);
   }
   
   .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
   }
   
   .project-image {
@@ -335,7 +362,7 @@
   }
   
   .project-info {
-    padding: 20px;
+    padding: 24px;
   }
   
   .project-info h3 {
@@ -357,10 +384,12 @@
   
   .project-tags span {
     background-color: var(--light-color);
-    color: var(--secondary-color);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.8rem;
+    color: var(--text-light);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
   }
   
   .project-links {
