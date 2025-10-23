@@ -230,6 +230,7 @@
   .cta-buttons {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
   }
   
   .hero-image {
@@ -288,43 +289,153 @@
     color: var(--secondary-color);
   }
   
-  /* Skills Section */
-  .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+  /* Experience Section */
+  .experience-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
-  .skill-card {
-    background-color: white;
-    padding: 24px;
+  .experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gradient);
+    transform: translateX(-50%);
+  }
+  
+  .experience-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: 50%;
+  }
+  
+  .experience-item:nth-child(odd) {
+    left: 0;
+    padding-right: 30px;
+  }
+  
+  .experience-item:nth-child(even) {
+    left: 50%;
+    padding-left: 30px;
+  }
+  
+  .experience-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+  }
+  
+  .experience-item:nth-child(odd)::before {
+    right: -8px;
+  }
+  
+  .experience-item:nth-child(even)::before {
+    left: -8px;
+  }
+  
+  .experience-content {
+    background: white;
+    padding: 30px;
     border-radius: 12px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
-    transition: var(--transition);
+    position: relative;
   }
   
-  .skill-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+  .experience-content h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
   }
   
-  .skill-card h3 {
-    margin-bottom: 15px;
-    font-weight: 600;
+  .experience-content h4 {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
   }
   
-  .skill-level {
-    height: 10px;
-    background-color: var(--border-color);
-    border-radius: 5px;
-    overflow: hidden;
+  .experience-date {
+    background: var(--gradient);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
   }
   
-  .skill-bar {
-    height: 100%;
-    background-color: var(--primary-color);
-    border-radius: 5px;
+  .experience-highlights {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  
+  .experience-highlights li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+  }
+  
+  /* Education Section */
+  .education-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .education-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .education-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    flex-shrink: 0;
+  }
+  
+  .education-icon i {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .education-details h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .education-details h4 {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .education-date {
+    background: var(--light-color);
+    color: var(--text-light);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 12px;
   }
   
   /* Projects Section */
@@ -395,6 +506,59 @@
   .project-links {
     display: flex;
     gap: 10px;
+  }
+  
+  /* Achievements Section */
+  #achievements {
+    background-color: var(--light-color);
+  }
+  
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .achievement-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: var(--transition);
+  }
+  
+  .achievement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .achievement-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+  
+  .achievement-icon i {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .achievement-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .achievement-card p {
+    color: var(--text-light);
+    line-height: 1.6;
   }
   
   /* Contact Section */
@@ -555,7 +719,32 @@
       font-size: 2rem;
     }
   
-    .skills-container {
+    .experience-timeline::before {
+      left: 20px;
+    }
+    
+    .experience-item {
+      width: 100%;
+      left: 0 !important;
+      padding-left: 50px !important;
+      padding-right: 0 !important;
+    }
+    
+    .experience-item::before {
+      left: 12px !important;
+    }
+    
+    .education-item {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .education-icon {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    
+    .achievements-grid {
       grid-template-columns: 1fr;
     }
   

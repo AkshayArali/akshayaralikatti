@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -19,7 +21,8 @@
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -42,6 +45,9 @@
                     </p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn primary-btn">View My Work</a>
+                        <a href="CV_AkshayAralikatti.pdf" class="btn secondary-btn" download>
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
                         <a href="#contact" class="btn secondary-btn">Contact Me</a>
                     </div>
                 </div>
@@ -92,56 +98,56 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section id="experience">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <h3>C++</h3>
-                    <div class="skill-level">
-                        <div class="skill-bar" style="width: 85%"></div>
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <h3>Software Developer & AI Engineer</h3>
+                        <h4>Freelance & Personal Projects</h4>
+                        <span class="experience-date">2023 - Present</span>
+                        <p>Developing full-stack applications with focus on AI/ML integration, computer vision, and scalable system architecture. Specializing in building intelligent solutions that address real-world problems.</p>
+                        <ul class="experience-highlights">
+                            <li>Built production-ready AI systems with MongoDB Atlas and FastAPI</li>
+                            <li>Developed computer vision applications using MediaPipe and Hume AI</li>
+                            <li>Created sustainable technology solutions for environmental impact</li>
+                            <li>Implemented real-time health monitoring systems</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="skill-card">
-                    <h3>React</h3>
-                    <div class="skill-level">
-                        <div class="skill-bar" style="width: 65%"></div>
+                
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <h3>Outdoor Education & Sustainability Coordinator</h3>
+                        <h4>Community Leadership</h4>
+                        <span class="experience-date">2020 - 2023</span>
+                        <p>Led trekking expeditions and implemented waste management solutions in residential communities. Developed strong project management, team leadership, and systems thinking skills.</p>
+                        <ul class="experience-highlights">
+                            <li>Organized and led multiple trekking expeditions</li>
+                            <li>Implemented sustainable waste management solutions</li>
+                            <li>Managed teams and logistics for community initiatives</li>
+                            <li>Developed environmental awareness programs</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="skill-card">
-                    <h3>JavaScript</h3>
-                    <div class="skill-level">
-                        <div class="skill-bar" style="width: 75%"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Responsive Design</h3>
-                    <div class="skill-level">
-                        <div class="skill-bar" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>UI/UX & Figma</h3>
-                    <div class="skill-level">
-                        <div class="skill-bar" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Git/GitHub</h3>
-                    <div class="skill-level">
-                        <div class="skill-bar" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>ML tools: Pytorch, Scikit-learn, Tensorflow</h3>
-                    <div class="skill-level">
-                        <div class="skill-bar" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Python: Django, Jupyter-notebook</h3>
-                    <div class="skill-level">
-                        <div class="skill-bar" style="width: 80%"></div>
+                    <div class="education-details">
+                        <h3>Bachelor of Technology (B.Tech)</h3>
+                        <h4>International Institute of Information Technology (IIIT)</h4>
+                        <span class="education-date">2020 - 2024</span>
+                        <p>Computer Science and Engineering with focus on AI/ML, Data Structures, and Software Development</p>
                     </div>
                 </div>
             </div>
@@ -197,7 +203,7 @@
                 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="portfolio.jpg" alt="Incremental Retrieval Cache - AI System">
+                        <img src="rag_incremental.png" alt="Incremental Retrieval Cache - AI System">
                     </div>
                     <div class="project-info">
                         <h3>Incremental Retrieval Cache (IRC)</h3>
@@ -215,6 +221,42 @@
                             <a href="https://github.com/AkshayArali/incremental_retreival_cache_seed" class="btn small-btn secondary-btn">Source Code</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Hackathon Winner</h3>
+                    <p>Won multiple hackathons for innovative AI and sustainability solutions, including Vibe Tracker and Ecolocator projects.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Open Source Contributor</h3>
+                    <p>Active contributor to open-source projects and maintainer of production-ready AI systems with comprehensive documentation.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability Advocate</h3>
+                    <p>Led environmental initiatives and developed technology solutions that promote sustainable living and waste reduction.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI/ML Innovation</h3>
+                    <p>Developed cutting-edge applications combining computer vision, natural language processing, and real-time data analysis.</p>
                 </div>
             </div>
         </div>
