@@ -3,329 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AkshayArali</title>
+    <title>Akshay Aralikatti</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Akshay Aralikatti</h1>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">AA</a>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#blogs">Blogs</a>
+                <a href="Akshay_dec25.pdf" class="nav-resume" download>Resume</a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Akshay Aralikatti</h1>
+                <p class="tagline">Building intelligent systems that bridge AI, robotics, and real-world impact.</p>
+                <div class="hero-links">
+                    <a href="https://github.com/AkshayArali" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/akshay-aralikatti" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:aralikatti94@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="potrait.jpeg" alt="Akshay Aralikatti">
+            </div>
         </div>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-                <div class="hero-text" style="flex: 1; min-width: 300px; margin-right: 20px;">
-                    <h2>Hello, I'm <span class="highlight">Akshay Aralikatti</span></h2>
-                    <h3>Full-Stack Developer | AI/ML Engineer | Problem Solver</h3>
-                    <p>
-                        I'm a passionate software developer with expertise in full-stack web development, 
-                        AI/ML technologies, and scalable system architecture. I specialize in building 
-                        intelligent applications that solve real-world problems, from incremental retrieval 
-                        systems to health monitoring tools. With a strong foundation in C++, Python, and 
-                        modern web technologies, I love creating efficient solutions that make a difference.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn primary-btn">View My Work</a>
-                        <a href="CV_AkshayAralikatti.pdf" class="btn secondary-btn" download>
-                            <i class="fas fa-download"></i> Download Resume
-                        </a>
-                        <a href="#contact" class="btn secondary-btn">Contact Me</a>
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="https://raw.githubusercontent.com/AkshayArali/voice_bot/main/Voice_bot_edit.jpg" alt="Voice Bot">
+                </div>
+                <div class="project-content">
+                    <h3>Voice-Controlled Robot</h3>
+                    <p>Edge-deployed AI robot on Raspberry Pi 5 with Picovoice wake-word (<10ms), OpenAI Whisper ASR, and Gemma-3-1B intent parsing. MediaPipe + OpenCV human-following at 5 FPS via ROS 2 Jazzy.</p>
+                    <div class="project-tech">
+                        <span>ROS 2</span>
+                        <span>Whisper</span>
+                        <span>MediaPipe</span>
+                        <span>Gemma</span>
                     </div>
+                    <a href="https://github.com/AkshayArali/voice_bot" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
                 </div>
-                <div class="hero-image" style="flex: 1; min-width: 300px; text-align: center;">
-                    <img src="potrait.jpeg" alt="Akshay Aralikatti" style="width: 100%; max-width: 300px; height: auto; border-radius: 20px;">
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="rag_incremental.png" alt="RAG Pipeline">
                 </div>
-            </div>
+                <div class="project-content">
+                    <h3>Eluvio RAG Agent</h3>
+                    <p>RAG pipeline using llama3.2:3b with Selenium crawler scraping 10K+ JS-rendered blocks. Chunked and embedded via Sentence Transformers, indexed with FAISS for sub-1s retrieval.</p>
+                    <div class="project-tech">
+                        <span>LLaMA</span>
+                        <span>FAISS</span>
+                        <span>Flask</span>
+                        <span>Selenium</span>
+                    </div>
+                    <a href="https://github.com/AkshayArali/rag-challenge" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" alt="ADAS System">
+                </div>
+                <div class="project-content">
+                    <h3>ADAS System</h3>
+                    <p>Real-time C++ OpenCV pipeline detecting lanes (RANSAC, Kalman Filter), vehicles (Haar Cascades), traffic signs & pedestrians (YOLO). Sub-40ms latency for high-speed driving.</p>
+                    <div class="project-tech">
+                        <span>C++</span>
+                        <span>OpenCV</span>
+                        <span>YOLO</span>
+                        <span>ROS</span>
+                    </div>
+                    <a href="https://github.com/AkshayArali/ADAS-System" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=600&h=400&fit=crop" alt="Toy Twitter">
+                </div>
+                <div class="project-content">
+                    <h3>Toy Twitter</h3>
+                    <p>Twitter's recommendation algorithm simulation on synthetic data. Bipartite graph construction, SALSA-style random walks, and feature-based tweet scoring with author bonuses.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Graph Algorithms</span>
+                        <span>Docker</span>
+                    </div>
+                    <a href="https://github.com/AkshayArali/toy_Twitter" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="moreThanMaps.png" alt="EcoLocator">
+                </div>
+                <div class="project-content">
+                    <h3>EcoLocator</h3>
+                    <p>Dockerized Django app on GCP with PostGIS mapping 150+ composting sites via OSM Overpass API. React+Bootstrap UI with authentication and impact tracking leaderboard.</p>
+                    <div class="project-tech">
+                        <span>Django</span>
+                        <span>PostGIS</span>
+                        <span>React</span>
+                        <span>GCP</span>
+                    </div>
+                    <a href="https://github.com/AkshayArali/ecolocator" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop" alt="Incremental Cache">
+                </div>
+                <div class="project-content">
+                    <h3>Incremental Retrieval Cache</h3>
+                    <p>Production-ready AI system with pluggable storage (SQLite/MongoDB Atlas). Features drift decisioning, novelty filtering, and budget-aware assembly for optimal retrieval.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>MongoDB</span>
+                        <span>Docker</span>
+                    </div>
+                    <a href="https://github.com/AkshayArali/incremental_retreival_cache_seed" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="vibeTracker.png" alt="Vibe Tracker">
+                </div>
+                <div class="project-content">
+                    <h3>Vibe Tracker</h3>
+                    <p>Desktop health app built at CalHacks 11.0. Real-time slouch detection and emotional expression analysis using MediaPipe and Hume AI for personal wellness monitoring.</p>
+                    <div class="project-tech">
+                        <span>Electron</span>
+                        <span>MediaPipe</span>
+                        <span>Hume AI</span>
+                    </div>
+                    <a href="https://github.com/EthanThatOneKid/vibetracker" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </article>
+
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a dedicated software developer with a unique background that spans outdoor education, 
-                        sustainability initiatives, and cutting-edge technology development. My journey began with 
-                        leading trekking expeditions and implementing waste management solutions, which taught me 
-                        valuable skills in project management, team leadership, and systems thinking.
-                        <br><br>
-                        My transition into software development was driven by a passion for creating innovative 
-                        solutions that address real-world challenges. I specialize in full-stack development, 
-                        AI/ML integration, and building scalable systems. My projects range from intelligent 
-                        retrieval systems with MongoDB Atlas to health monitoring applications using computer vision.
-                        <br><br>
-                        I'm particularly passionate about the intersection of technology and human impact, 
-                        whether it's developing efficient algorithms, optimizing system performance, or 
-                        leveraging AI to solve complex problems. My goal is to create solutions that are 
-                        not only technically excellent but also meaningful and accessible.
-                    </p>
+    <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-list">
+            
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Software Developer</h3>
+                        <span class="company">Virtual Labs – IIIT Hyderabad</span>
+                    </div>
+                    <span class="date">Nov 2022 – Mar 2024</span>
                 </div>
-                <!-- <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>2+</h3>
-                        <p>Years Experience</p>
+                <ul class="exp-details">
+                    <li>Led design of 7 interactive OS labs using MERN stack, serving 8.5M+ participants across 46M+ page views</li>
+                    <li>Refactored 800+ lines legacy code, integrated Jest/Cypress tests, improving stability by 30%</li>
+                    <li>Built REST APIs with MongoDB/PostgreSQL persistence and GitLab CI/CD pipelines</li>
+                </ul>
+            </article>
+
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Full-Stack Engineer</h3>
+                        <span class="company">Indiahikes</span>
                     </div>
-                    <div class="stat-item">
-                        <h3>10+</h3>
-                        <p>Projects Completed</p>
+                    <span class="date">Sept 2017 – Dec 2022</span>
+                </div>
+                <ul class="exp-details">
+                    <li>Built core booking platform handling 20,000+ trekkers and 35,000+ bookings annually</li>
+                    <li>Containerized services using Docker, deployed cloud-native microservices on AWS/GCP</li>
+                    <li>Implemented caching via Redis, reducing booking-flow latency by 40%</li>
+                    <li>Led 80+ high-altitude Himalayan expeditions while gathering user feedback for product improvements</li>
+                </ul>
+            </article>
+
+            <article class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>UI/UX Design Intern</h3>
+                        <span class="company">Wissen Technologies</span>
                     </div>
-                    <div class="stat-item">
-                        <h3>5+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                </div> -->
-            </div>
+                    <span class="date">Apr 2024 – Jul 2024</span>
+                </div>
+                <ul class="exp-details">
+                    <li>Designed 6 production-ready web layouts in Figma, improving navigation efficiency by 30%</li>
+                    <li>Collaborated with engineers to translate wireframes into responsive React components</li>
+                </ul>
+            </article>
+
         </div>
     </section>
 
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-content">
-                        <h3>Software Developer & AI Engineer</h3>
-                        <h4>Freelance & Personal Projects</h4>
-                        <span class="experience-date">2023 - Present</span>
-                        <p>Developing full-stack applications with focus on AI/ML integration, computer vision, and scalable system architecture. Specializing in building intelligent solutions that address real-world problems.</p>
-                        <ul class="experience-highlights">
-                            <li>Built production-ready AI systems with MongoDB Atlas and FastAPI</li>
-                            <li>Developed computer vision applications using MediaPipe and Hume AI</li>
-                            <li>Created sustainable technology solutions for environmental impact</li>
-                            <li>Implemented real-time health monitoring systems</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="experience-content">
-                        <h3>Outdoor Education & Sustainability Coordinator</h3>
-                        <h4>Community Leadership</h4>
-                        <span class="experience-date">2020 - 2023</span>
-                        <p>Led trekking expeditions and implemented waste management solutions in residential communities. Developed strong project management, team leadership, and systems thinking skills.</p>
-                        <ul class="experience-highlights">
-                            <li>Organized and led multiple trekking expeditions</li>
-                            <li>Implemented sustainable waste management solutions</li>
-                            <li>Managed teams and logistics for community initiatives</li>
-                            <li>Developed environmental awareness programs</li>
-                        </ul>
-                    </div>
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
+                <div class="skill-tags">
+                    <span>C/C++</span>
+                    <span>Python</span>
+                    <span>Go</span>
+                    <span>JavaScript</span>
+                    <span>Django</span>
+                    <span>FastAPI</span>
+                    <span>Node.js</span>
+                    <span>React</span>
+                    <span>Spring Boot</span>
                 </div>
             </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-brain"></i> ML & AI</h3>
+                <div class="skill-tags">
+                    <span>PyTorch</span>
+                    <span>TensorFlow</span>
+                    <span>LLM Fine-tuning</span>
+                    <span>RAG Pipelines</span>
+                    <span>TensorRT</span>
+                    <span>FAISS</span>
+                    <span>Vector DBs</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-robot"></i> Systems & Robotics</h3>
+                <div class="skill-tags">
+                    <span>ROS 2</span>
+                    <span>OpenCV</span>
+                    <span>MediaPipe</span>
+                    <span>Multithreading</span>
+                    <span>Low-latency Pipelines</span>
+                    <span>TCP/IP</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
+                <div class="skill-tags">
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>AWS</span>
+                    <span>GCP</span>
+                    <span>GitHub Actions</span>
+                    <span>Terraform</span>
+                    <span>Prometheus</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-content">
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="education-details">
-                        <h3>Masters in Computer Science</h3>
-                        <h4>California State University, Chico</h4>
-                        <span class="education-date">2024 - 2026</span>
-                        <p>Computer Science and Engineering with focus on AI/ML, Data Structures, and Software Development</p>
-                    </div>
-                </div>
-            </div>
+    <section id="blogs" class="section">
+        <h2 class="section-title">Blogs</h2>
+        <div class="blogs-placeholder">
+            <i class="fas fa-pencil-alt"></i>
+            <p>Coming soon — technical deep-dives and lessons from the field.</p>
         </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="vibeTracker.png" alt="Vibe Tracker - Health Monitoring App">
-                    </div>
-                    <div class="project-info">
-                        <h3>Vibe Tracker</h3>
-                        <p>A comprehensive health monitoring application that tracks posture and emotional well-being using computer vision and AI. Features real-time slouch detection and expression analysis to help users maintain better health in the digital age.</p>
-                        <div class="project-tags">
-                            <span>Electron</span>
-                            <span>MediaPipe</span>
-                            <span>Hume AI</span>
-                            <span>JavaScript</span>
-                            <span>Computer Vision</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://devpost.com/software/vibe-tracker" class="btn small-btn">View Project</a>
-                            <a href="https://github.com/AkshayArali/vibe-tracker" class="btn small-btn secondary-btn">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="moreThanMaps.png" alt="Ecolocator - Sustainability Platform">
-                    </div>
-                    <div class="project-info">
-                        <h3>Ecolocator</h3>
-                        <p>A sustainability platform that bridges the gap between institutions wanting to compost and composting facilities. Features AI-powered guidance, interactive maps, and community building tools to promote environmental responsibility.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>Gemini AI</span>
-                            <span>Leaflet.js</span>
-                            <span>Express.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AkshayArali/ecolocator" class="btn small-btn">View Project</a>
-                            <a href="https://github.com/AkshayArali/ecolocator" class="btn small-btn secondary-btn">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="rag_incremental.png" alt="Incremental Retrieval Cache - AI System">
-                    </div>
-                    <div class="project-info">
-                        <h3>Incremental Retrieval Cache (IRC)</h3>
-                        <p>A production-ready AI system for intelligent content retrieval with pluggable storage (SQLite/MongoDB Atlas). Features drift decisioning, novelty filtering, and budget-aware assembly for optimal performance in AI applications.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>MongoDB Atlas</span>
-                            <span>SQLite</span>
-                            <span>Docker</span>
-                            <span>AI/ML</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/AkshayArali/incremental_retreival_cache_seed" class="btn small-btn">View Project</a>
-                            <a href="https://github.com/AkshayArali/incremental_retreival_cache_seed" class="btn small-btn secondary-btn">Source Code</a>
-                        </div>
-                    </div>
-                </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/AkshayArali" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/akshay-aralikatti" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:aralikatti94@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
-        </div>
-    </section>
-
-    <section id="achievements">
-        <div class="container">
-            <h2 class="section-title">Key Achievements</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Hackathon </h3>
-                    <p> Attended multiple hackathons for innovative AI and sustainability solutions, including Vibe Tracker and Ecolocator projects.</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Open Source Contributor</h3>
-                    <p>Active contributor to open-source projects and maintainer of production-ready AI systems with comprehensive documentation.</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Sustainability Advocate</h3>
-                    <p>Led environmental initiatives and developed technology solutions that promote sustainable living and waste reduction.</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI/ML Innovation</h3>
-                    <p>Developed cutting-edge applications combining computer vision, natural language processing, and real-time data analysis.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>Feel free to reach out to me for collaboration or just to say hello!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <p>aralikatti94@gmail.com</p>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📱</span>
-                            <p>+1 (530) 321 ****</p>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <p>Chico, California</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/AkshayArali" class="social-link">GitHub</a>
-                        <a href="https://linkedin.com/in/akshay-aralikatti" class="social-link">LinkedIn</a>
-                        <!-- <a href="#" class="social-link">Twitter</a> -->
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Send Me a Message</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Akshay Aralikatti. All Rights Reserved.</p>
-                <!-- <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div> -->
-            </div>
+            <p>© 2025 Akshay Aralikatti</p>
         </div>
     </footer>
 </body>
 </html>
-
